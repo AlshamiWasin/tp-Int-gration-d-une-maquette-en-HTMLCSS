@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: url('/path-to/Gilroy-Light.woff2') format('woff2'),
+       url('/path-to/Gilroy-Light.woff') format('woff'),
+       url('/path-to/Gilroy-Light.ttf')  format('truetype');
+}
+
+body {
+  font-family: 'Gilroy-Light', sans-serif;
+}

@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Chronicle Display Semibold';
+  src: url('/path-to/Chronicle Display Semibold.woff2') format('woff2'),
+       url('/path-to/Chronicle Display Semibold.woff') format('woff'),
+       url('/path-to/Chronicle Display Semibold.ttf')  format('truetype');
+}
+
+body {
+  font-family: 'Chronicle Display Semibold', sans-serif;
+}

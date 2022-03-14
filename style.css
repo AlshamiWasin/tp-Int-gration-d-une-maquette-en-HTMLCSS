@@ -13,6 +13,10 @@
         src: url("fonts/Chronicle Display Semibold/Chronicle Display Semibold.woff") format("woff");
     }
     
+    html {
+        scroll-behavior: smooth;
+    }
+    
     body {
         color: white;
         font-family: 'GiloryLight';
@@ -73,21 +77,20 @@
     .social_area {
         display: flex;
         justify-content: center;
+        padding-left: 1%;
+    }
+    
+    .social {
+        font-size: 1.1vw;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        margin-left: 2.5vh;
+        justify-content: space-around;
     }
     
     .verticaltext {
         writing-mode: vertical-rl;
         text-orientation: mixed;
-    }
-    
-    .social {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        height: 20vh;
     }
     
     .HeaderList {
@@ -124,6 +127,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        font-size: 1.1vw;
     }
     
     .arrowdown {
@@ -197,14 +201,11 @@
         display: flex;
         flex-direction: row;
         z-index: 1;
-        padding-top: 3%;
-        padding-left: 6%;
     }
     
     .reverse_content_area {
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: row-reverse;
         z-index: 1;
     }
     
@@ -235,12 +236,10 @@
     }
     
     .content_area_items {
-        padding: 5%;
-    }
-    
-    .reverse_content_area_items {
-        padding-top: 10%;
-        padding-left: 10%;
+        padding: 10%;
+        position: relative;
+        padding-left: 15%;
+        width: 50%;
     }
     
     .Line_and_text {
@@ -327,7 +326,7 @@
     
     .image {
         display: block;
-        width: 170%;
+        width: 50%;
     }
     
     .image img {
@@ -342,21 +341,14 @@
     }
     
     .content_number {
-        position: absolute !important;
-        z-index: 2 !important;
-        opacity: 0.1 !important;
-        margin: auto !important;
-        font-size: 12vw !important;
+        position: absolute;
+        z-index: 2;
+        opacity: 0.1;
+        margin: auto;
+        font-size: 12vw;
         font-family: 'GiloryExtraBold';
-    }
-    
-    .reverce_content_number {
-        position: absolute !important;
-        z-index: 2 !important;
-        opacity: 0.1 !important;
-        margin: auto !important;
-        font-size: 12vw !important;
-        font-family: 'GiloryExtraBold';
+        top: 5%;
+        left: 7%;
     }
     
     footer {
@@ -377,14 +369,11 @@
         font-size: 1.25vw;
     }
     
-    footer ul {
+    footer a {
         font-style: normal;
         font-weight: 600;
         font-size: 1.25vw;
         list-style: none;
-    }
-    
-    footer li {
         padding-top: 5%;
         padding-bottom: 5%;
     }
@@ -426,4 +415,27 @@
     
     .footerLOGO .soustitre {
         width: 60%;
+    }
+    /* responsive part */
+    
+    @media screen and (max-width: 831px) {
+        .content_area {
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+            align-items: center;
+        }
+        .reverse_content_area {
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+            align-items: center;
+        }
+        .content_area_items {
+            position: relative;
+            width: auto;
+        }
+        main {
+            margin: 0;
+        }
     }
